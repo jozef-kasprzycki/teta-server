@@ -1,5 +1,9 @@
+from pathlib import Path
+
+
 def get_env(var_name):
-    env_data = open('./.env', 'r').read()
+    env_path = Path(__file__).with_name(".env")
+    env_data = env_path.read_text(encoding="utf-8")
     
     for line in env_data.split('\n'):
         # Usuwamy zbędne spacje z początku i końca linii

@@ -18,6 +18,11 @@ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -node
 Create `.env` file
 ```env
 PORT=<listening_port>
+DB_HOST=<database uri>
+DB_NAME=<db name>
+DB_USER=<db username>
+DB_PASSWORD=<db password>
+
 ```
 
 ## Run
